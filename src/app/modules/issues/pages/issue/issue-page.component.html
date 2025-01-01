@@ -1,0 +1,27 @@
+@if (issue.data() === undefined || comments === undefined) {
+<spinner type="infinity" />
+}
+
+<div class="flex flex-row items-center justify-between gap-3">
+  <h1 class="font-thin">Issue #<small>{{ issueNumber() }}</small></h1>
+  <a routerLink="/" class=" text-white cursor-pointer decoration-transparent">
+    < Return</a>
+</div>
+<div class="my-5 border-b-2 border-zinc-800"></div>
+
+@if (issue.data() !== undefined) {
+<issue-comment [issue]="issue.data()!" />
+}
+
+
+<!-- Comments section -->
+
+@if (comments.data() !== undefined) {
+  @if (comments.data()?.length === 0) {
+  <div class="text-center text-white">No comments yet</div>
+  } @else {
+    @for (comment of comments.data(); track comment.id) {
+      <issue-comment [issue]="comment" />
+    }
+  }
+}

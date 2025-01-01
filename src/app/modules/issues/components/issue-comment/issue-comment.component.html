@@ -1,0 +1,21 @@
+<div class="w-full border-2 border-zinc-800 rounded-lg mb-5">
+  <div class="border border-zinc-800 rounded-lg shadow-md">
+    <div class="flex items-center justify-between bg-zinc-800 text-white p-2 rounded-t-lg">
+      <div class="flex items-center">
+        <img [src]="issue().user.avatar_url" alt="User Avatar" class="w-8 h-8 rounded-full" />
+        <span class="mx-2">{{ issue().user.login | capitalize }}</span>
+      </div>
+      <div>
+        <span class="font-bold">{{ issue().created_at | date }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-3 text-white">
+    @if (issue().body === '' || issue().body === null) {
+    <div class="text-center">No description provided</div>
+    } @else {
+    <markdown>{{ issue().body }}</markdown>
+    }
+  </div>
+</div>

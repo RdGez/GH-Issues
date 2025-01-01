@@ -1,0 +1,10 @@
+@if (type() === 'spinner') {
+<div class="flex justify-center items-center">
+  <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+</div>
+
+} @else if (type() === 'infinity') {
+<div class="fixed top-0 left-0 w-full">
+  <div class="h-1 bg-blue-500 animate-pulse animate-slide"></div>
+</div>
+}

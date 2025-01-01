@@ -1,0 +1,14 @@
+<div class="flex flex-wrap">
+  @for (label of labels(); track label.id) {
+    <div
+      class="w-full flex items-center cursor-pointer mb-2 hover:font-bold text-zinc-400"
+      (click)="onToggleLabel(label.name)"
+      [class.selected-label]="isSelected(label.name)"
+      [ngStyle]="{ 'color': isSelected(label.name) ? '#ffffff' : '' }">
+      <span
+        class="inline-block w-4 h-4 rounded-full mr-2"
+        [ngStyle]="{ 'background-color': '#' + label.color }"></span>
+      <span class="hover:text-white">{{ label.name | capitalize }}</span>
+    </div>
+  }
+</div>
