@@ -2,7 +2,6 @@
 <br>
 <p align="center">
   <a href="https://angular.io/" target="blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*Klh1l7wkoG6PDPb9A5oCHQ.png" width="250" alt="Angular Logo" /></a>
-  <a href="https://tanstack.com/" target="blank"><img src="https://tanstack.com/_build/assets/logo-color-600w-Er4SOkq1.png" width="250" alt="TanStack Logo" /></a>
 </p>
 
 # TanStack Query - App
